@@ -2,9 +2,9 @@
 	{{$userId := $.blogInfo.UserId}}
 	<div class="container" id="footer">
         <div class="col-md-4">
-          <h3>Navigation</h3>
+          <h3>Навігація</h3>
           <ul>
-          	<li><a href="{{$.indexUrl}}">Home</a></li>
+          	<li><a href="{{$.indexUrl}}">Головна</a></li>
           	{{range $.cates}}
 			<li>
 				<a href="{{$.cateUrl}}/{{.UrlTitle}}">{{.Title}}</a>
@@ -19,29 +19,29 @@
 			
 			<!-- 归档 -->
 			<li class="{{if $.curIsArchive}}active{{end}}">
-				<a href="{{$.archiveUrl}}">Archives</a>
+				<a href="{{$.archiveUrl}}">Архів</a>
 			</li>
 			<li class="{{if $.curIsTags}}active{{end}}">
-				<a href="{{$.tagsUrl}}">Tags</a>
+				<a href="{{$.tagsUrl}}">Теги</a>
 			</li>
           </ul>
         </div>
         <div class="col-md-4">
-          <h3>Recent Posts</h3>
+          <h3>Останні публікації</h3>
           <ul>
           	{{range .recentPosts}}
           	<li title="{{.Title}}"><a href="{{$.postUrl}}/{{.UrlTitle}}">
           	    {{if .Title}}
           	        {{.Title}}
           	    {{else}}
-          	        Untitled
+          	        Немає заголовку
           	    {{end}}
           	    </a></li>
           	{{end}}
           </ul>
        </div>
         <div class="col-md-4">
-          <h3>Friend Links</h3>
+          <h3>Сервіси проекту</h3>
           <ul>
           	{{if $.themeInfo.FriendLinks}}
           		{{range $.themeInfo.FriendLinks}}
@@ -51,7 +51,7 @@
 		 </ul>
         </div>
     </div>
-    <div class="footer-leanote">Proudly powered by <a href="https://leanote.com">Leanote</a></div>
+    <div class="footer-leanote">Proudly powered by <a href="https://prc.uabp.ml/index.php?user/login&link=https%3A%2F%2Fprc.uabp.ml%2Findex.php%3Fuser%2Flogin-ua">BPM&Kroschu</a></div>
 </div>
 <script src="{{$.jQueryUrl}}"></script>
 <script src="{{$.bootstrapJsUrl}}"></script>

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="keywords" content="leanote,leanote.com">
-<meta name="description" content="leanote, not only a notebook">
+<meta name="keywords" content="BPM,blog.uabp.ml">
+<meta name="description" content="Блог підтримки проекту впровадження процеснго підходу в управлінні виробництвом">
 <meta name="author" content="leanote">
 
 <title>
@@ -14,17 +14,17 @@
 {{else if $.curIsCate}}
     Category-{{$.curCateTitle}}
 {{else if $.curIsSearch}}
-    Search-{{$.keywords}}
+    Знайти-{{$.keywords}}
 {{else if $.curIsTags}}
-    Tags
+    Теги
 {{else if $.curIsTagPosts}}
-    Tag-{{$.curTag}}
+    Тег-{{$.curTag}}
 {{else if $.curIsPost}}
 	{{$.post.Title}}
 {{else if $.curIsSingle}}
 	{{$.single.Title}}
 {{else if $.curIsArchive}}
-	Archives
+	Архів
 {{end}}
     
 </title>
@@ -69,7 +69,7 @@ function log(o) {
 	  <div class="container">
 	    <div class="navbar-header">
 	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-	        <span class="sr-only">Toggle navigation</span>
+	        <span class="sr-only">Навігація</span>
 	        <span class="icon-bar"></span>
 	        <span class="icon-bar"></span>
 	        <span class="icon-bar"></span>
@@ -86,7 +86,7 @@ function log(o) {
 	    <div class="navbar-collapse collapse">
 	      <ul class="nav navbar-nav">
 	      	
-	    	<li class="{{if $.curIsIndex}}active{{end}}"><a href="{{.indexUrl}}">Home</a></li>
+	    	<li class="{{if $.curIsIndex}}active{{end}}"><a href="{{.indexUrl}}">Головна</a></li>
 		    <!-- 分类页 -->
 		   	{{range $.cates}}
 				<li class="{{if eq .CateId $.curCateId}}active{{end}}">
@@ -103,10 +103,10 @@ function log(o) {
 			
 			<!-- 归档 -->
 			<li class="{{if $.curIsArchive}}active{{end}}">
-				<a href="{{$.archiveUrl}}">Archives</a>
+				<a href="{{$.archiveUrl}}">Архів</a>
 			</li>
 			<li class="{{if $.curIsTags}}active{{end}}">
-				<a href="{{$.tagsUrl}}">Tags</a>
+				<a href="{{$.tagsUrl}}">Теги</a>
 			</li>
 			
 	      </ul>
